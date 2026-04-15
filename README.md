@@ -4,9 +4,9 @@
 
 **Relevanz**: Alle Studierenden, die eine Masterarbeit abgeben, müssen im Normalfall auch ihren Datenanalysecode abgeben. Es bietet sich an, ihn öffentlich über GitHub zu teilen, anstatt ihn zum Beispiel als separates Dokument per Mail schicken zu müssen.
 
-**Vorschau**: Wenn alles erfolgreich umgesetzt worden ist, dann braucht der/die Studierende lediglich den Online-Link zum eigenen GitHub Repository zu kopieren und in die Masterarbeit einsetzen. Der/die Leser/in kann dann innerhalb der Masterarbeit auf den Link klicken, um auf das **öffentliche**(!) Repository zugreinfen und von dort das Dokument mit dem Analysecode runterladen zu können.
+**Vorschau**: Wenn alles erfolgreich umgesetzt worden ist, dann braucht der/die Studierende lediglich den Online-Link zum eigenen GitHub Repository zu kopieren und in die Masterarbeit einsetzen. Der/die Leser/in kann dann innerhalb der Masterarbeit auf den Link klicken, um auf das **öffentliche**(!) Repository zugreifen und von dort das Dokument mit dem Analysecode runterladen zu können.
 
-**Zweiteilige Umsetzung**:
+**Zweiteilige Umsetzung des Ziels**:
 
 1. Minimalvariante. Empfohlen, wenn Studierende sich sicher sind, dass die Masterarbeit die letzte wissenschaftliche Arbeit ihres Lebens sein soll.
 2. Etwas umfangreichere Variante. Empfohlen, wenn Studierende es in Betracht ziehen, weitere wissenschaftliche Arbeiten zu produzieren und vielleicht zu publizieren. Es wird vermutlich bzw. hoffentlich so kommen, dass in Zukunft open science die Norm wissenschaftlichen Publizierens sein wird. Hierzu zählt auch das öffentliche Teilen des Analysecodes, unabhängig davon, ob der Datensatz ebenfalls publiziert wird.
@@ -45,4 +45,4 @@ Ergebnis: Nun ist der Ordner meinProjekt am gewählten Zielort auf meinem Rechne
 5. Belasse die Auswahl 'GitHub.com' und den Namen. Falls gewünscht, trage etwas in das Description Feld. Damit das Repository Public ist, entferne den Haken aus der Tick box 'Keep this code private'. Zuletzt: Klicke Button 'Publish repository'.
 6. Alle Änderungen im Verzeichnis 'meinProjekt' auf meinem Rechner, d.h. alle Änderungen in jedem dort befindlichen Dokument werden erkannt. Die geänderten Dokumente können nun über GHD zum GitHub repository transportiert (siehe 'Push origin' in GHD) werden.
 
-Ende beider Umsetzungen. Ab hier heisst es: Ausprobieren.
+Ende beider Umsetzungen. Ab hier heisst es: Ausprobieren. Viel Spass und Erfolg!
