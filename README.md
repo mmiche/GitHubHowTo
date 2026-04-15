@@ -4,7 +4,7 @@
 
 **Relevanz**: Alle Studierenden, die eine Masterarbeit abgeben, müssen im Normalfall auch ihren Datenanalysecode abgeben. Es bietet sich an, ihn öffentlich über GitHub zu teilen, anstatt ihn zum Beispiel als separates Dokument per Mail schicken zu müssen.
 
-**Vorschau**: Wenn alles erfolgreich umgesetzt worden ist, dann braucht der/die Studierende lediglich den Online-Link zum eigenen GitHub Repository zu kopieren und in die Masterarbeit einsetzen. Der/die Leser/in kann dann innerhalb der Masterarbeit auf den Link klicken, um auf das **öffentliche**(!) Repository zugreifen und von dort das Dokument mit dem Analysecode runterladen zu können.
+**Vorschau**: Wenn alles erfolgreich umgesetzt worden ist, dann braucht der/die Studierende lediglich den Online-Link zum eigenen GitHub Repository zu kopieren und in die Masterarbeit einzusetzen. Der/die Leser/in kann dann innerhalb der Masterarbeit auf den Link klicken, um auf das **öffentliche**(!) Repository zugreifen und von dort das Dokument mit dem Analysecode runterladen zu können.
 
 **Zweiteilige Umsetzung des Ziels**:
 
