@@ -41,6 +41,6 @@ Bedingung: Es muss die Software GitHub Desktop (GHD) installiert werden, siehe [
 Ergebnis: Nun ist der Ordner meinProjekt am gewählten Zielort auf meinem Rechner erzeugt worden. Darin ist eine Datei enthalten, README.md
 4. Klicke in GHD auf den Button 'Publish repository'. Es öffnet sich ein separates Fenster in GHD.
 5. Belasse die Auswahl 'GitHub.com' und den Namen. Falls gewünscht, trage etwas in das Description Feld. Damit das Repository Public ist, entferne den Haken aus der Tick box 'Keep this code private'. Zuletzt: Klicke Button 'Publish repository'.
-6. Alle Änderungen im Verzeichnis 'meinProjekt' auf meinem Rechner, d.h. alle Änderungen in jedem dort befindlichen Dokument werden erkannt. Die geänderten Dokumente können nun über GHD zum GitHub repository transportiert (siehe Push Origin in GHD) werden.
+6. Alle Änderungen im Verzeichnis 'meinProjekt' auf meinem Rechner, d.h. alle Änderungen in jedem dort befindlichen Dokument werden erkannt. Die geänderten Dokumente können nun über GHD zum GitHub repository transportiert (siehe 'Push origin' in GHD) werden.
 
 Ende beider Umsetzungen. Ab hier heisst es: Ausprobieren.
