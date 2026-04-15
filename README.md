@@ -4,6 +4,8 @@
 
 **Relevanz**: Alle Studierenden, die eine Masterarbeit abgeben, müssen im Normalfall auch ihren Datenanalysecode abgeben. Es bietet sich an, ihn öffentlich über GitHub zu teilen, anstatt ihn zum Beispiel als separates Dokument per Mail schicken zu müssen.
 
+**Vorschau**: Wenn alles erfolgreich umgesetzt worden ist, dann braucht der/die Studierende lediglich den Online-Link zum eigenen GitHub Repository zu kopieren und in die Masterarbeit einsetzen. Der/die Leser/in kann dann innerhalb der Masterarbeit auf den Link klicken, um auf das **öffentliche**(!) Repository zugreinfen und von dort das Dokument mit dem Analysecode runterladen zu können.
+
 **Zweiteilige Umsetzung**:
 
 1. Minimalvariante. Empfohlen, wenn Studierende sich sicher sind, dass die Masterarbeit die letzte wissenschaftliche Arbeit ihres Lebens sein soll.
@@ -28,7 +30,7 @@
 
 **Umsetzung 2**:
 
-Bedingung: Es muss die Software GitHub Desktop (GHD) installiert werden, siehe [hier](https://docs.github.com/de/desktop/overview/getting-started-with-github-desktop). Auf der Webseite, siehe Teil 1 'Installieren ...' Teil 2 ('Konfigurieren ...') ist nicht wichtig, um mit folgenden Punkten weitermachen zu können.
+Bedingung: Es muss die Software GitHub Desktop (GHD) installiert werden, siehe [hier](https://docs.github.com/de/desktop/overview/getting-started-with-github-desktop). Auf der Webseite, siehe Teil 1 'Installieren ...'. Hingegen ist Teil 2 ('Konfigurieren ...') nicht wichtig, um mit folgenden Punkten weitermachen zu können.
 
 1. Öffne GHD.
 2. Gehe im GHD Menü auf File und dann auf New Repository. Es öffnet sich ein separates Fenster in GHD.
