@@ -5,6 +5,14 @@ Du möchtest deinen Analysecode als HTML über GitHub öffentlich zeigen?
 1. Öffne in RStudio ein leeres rmarkdown (Rmd) Dokument. (RStudio > File > New File > R Markdown ... Es öffnet sich ein Fenster, klicke links unten auf 'Create empty document').
 2. Beginne dieses leere Rmd Dokument hiermit:
 
+````markdown
+`r ''````{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE)
+```
+````
+
+Darunter kommt dies:
+
 ``` r
 ---
 title: "Mein Titel"
@@ -18,6 +26,10 @@ output: html
 ### Erster Tab
 
 Dieser Code ist zur besseren Übersicht in Tabs unterteilt.
+
+### Zweiter Tab
+
+Code ...
 
 ```
 
