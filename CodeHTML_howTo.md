@@ -6,7 +6,7 @@ Du möchtest deinen Analysecode als HTML über GitHub öffentlich zeigen?
 2. Beginne dieses leere Rmd Dokument hiermit:
 
 ````markdown
-`r ''````{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message=FALSE)
 ```
 ````
