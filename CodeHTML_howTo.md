@@ -30,4 +30,16 @@ Code ...
 
 3. Speichere das Rmd Dokument unter dem Namen index.Rmd
 4. Wenn ein erster Entwurf des Rmd Dokuments fertig ist, klicke in RStudio auf den 'Knit' Button. Oder: File > Knit Document. Das Rmd wird nun in eine html Datei übersetzt, dessen Name 'index.html' sein wird. Öffne diese html Datei, um sie zu begutachten.
-5. Eröffne entweder ein neues Repository auf GitHub (siehe README.md) oder nutze ein bestehendes Repository.
+5. Eröffne entweder ein neues Repository auf deinem GitHub Account (siehe [README.md](https://github.com/mmiche/GitHubHowTo)) oder nutze ein bestehendes Repository.
+6. Erzeuge auf deinem lokalen Rechner einen neuen Ordner namens docs (es ist wichtig, dass der Ordner so heisst, inkl. Kleinschreibung!).
+7. Ziehe die index.html Datei in diesen docs Ordner.
+8. Transportiere (siehe [hier](https://github.com/mmiche/GitHubHowTo) beschriebene 'Umsetzung 2') den docs Ordner in das GitHub Repository.
+9. Sobald der docs Ordner mit der html Datei darin auf dem Repository ist, gehe innerhalb des Repository (also auf GitHub) auf 'Settings', innerhalb von Settings auf 'Pages', dann bei 'Build and deployment' klicke auf 'Branch', wähle im Dropdown-Menü "main" und rechts daneben "docs".
+10. Warte bis die Webseite eingerichtet worden ist (je nach Grösse der html Datei kann dies etwas dauern).
+
+Wenn es fertig ist, dann kann es ungefähr so aussehen:
+
+
+Formatierungshinweise:
+[zu Rmd](https://yihui.org/rmarkdown/markdown-syntax) und
+[zu md](https://www.markdownguide.org/basic-syntax/) Dateien.
