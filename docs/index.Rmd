@@ -130,7 +130,7 @@ matplot(y=rbind(1:7, 1:7), x=mat3, type="l", lty=1, lwd=2,
 
 ### Lesehinweise
 
-Wer an theoretischen Aspekten rund um das (frequentistische) 95% Konfidenzinterval hat, siehe Naimi & Whitcomb (2020) 'Can Confidence Intervals Be Interpreted?'
+Wer an theoretischen Aspekten rund um das (frequentistische) 95% Konfidenzintervall Interesse hat, siehe 'Can Confidence Intervals Be Interpreted?' von Naimi & Whitcomb (2020).
 
 Sehr nahe verwandt ist der weit verbreitete Irrglaube, demzufolge zwei überlappende, unabhängige Konfidenzintervalle immer anzeigen, dass sich beide Gruppen statistisch nicht signifikant voneinander unterscheiden. Zur Einsicht reicht das Abstract von Cumming (2009).
 
