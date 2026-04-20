@@ -1,0 +1,141 @@
+---
+title: "Verhalten des 95% Konfidenzintervalls"
+author: "Marcel Miché"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE)
+```
+
+## Wie verhält sich das 95% Konfidenzintervall? {.tabset}
+
+### Einleitung
+
+**Hauptfrage**: Wie verhält sich das zweiseitige 95% Konfidenzinterval (95% KI) unter drei verschiedenen Bedingungen?
+
+Diese Frage wird völlig unabhängig von jeglichen theoretischen Fragen behandelt, die man zum 95% KI stellen könnte. Es geht also lediglich um das zahlenmässige Verhalten des 95% KI, d.h. unter welchen Bedingungen verändert sich dessen Breite? Mit Breite ist die Distanz gemeint zwischen unterer und oberer 95% KI Grenze.
+
+Es wird der Output eines einfachen linearen Regressionsmodells genommen, d.h. das Regressionsgewicht (Estimate), dessen Standardfehler (StdError), die t-Statistik (= Estimate/StdError), dessen p-Wert und dessen zweiseitiges 95% KI.
+
+**Hinweis**: Der Inhalt dieser html Datei als R-Skript (behaviorOf95PercentCI.R) kann von [hier](https://github.com/mmiche/GitHubHowTo) runtergeladen werden.
+
+### Vorbereitung
+
+Vorab, zwei eigene Funktionen:
+
+```{r chunk1}
+# Eigens geschriebene Funktion, um 2-seitigen p-Wert korrekt zu berechnen.
+# Notiz: Abhängig davon, ob Regressionsgewicht negativ oder positiv ist, muss man in der Funktion qt() das Argument lower.tail auf TRUE belassen oder es zu FALSE ändern.
+pValFun <- function(tValue=NULL, df=NULL) {
+    if(tValue < 0) {
+        return(pt(q=tValue, df=df)*2)
+    } else {
+        return(pt(q=tValue, df=df, lower.tail = FALSE)*2)
+    }
+}
+```
+
+
+```{r chunk2}
+# Eigens geschriebene  Funktion, die die t-Statistik, den p-Wert und das 95% KI berechnet.
+manualComputation <- function(data=NULL, percent=.95, df=NULL) {
+    # Berechne t-Statistik
+    tVals <- data[,"Estimate"]/data[,"StdError"]
+    # Berechne 2-seitigen p-Wert
+    pVals <- c()
+    for(i in 1:length(tVals)) {
+        pVals <- c(pVals, pValFun(tValue=tVals[i], df=df))
+    }
+    # Ermittle kritischen 2-seitigen Wert unter t-Verteilung
+    crit <- qt((1-percent)/2, df=df, lower.tail = FALSE)
+    # left = untere Grenze des CI
+    left <- data[,"Estimate"] - crit * data[,"StdError"]
+    # right = obere Grenze des CI
+    right <- data[,"Estimate"] + crit * data[,"StdError"]
+    # out = Alle Ergebnisse als data.frame ausgeben.
+    out <- data.frame(
+        Estimate=data[,"Estimate"],
+        StdError=data[,"StdError"],
+        tValue=tVals,
+        pValue=pVals,
+        lowerCI=left,
+        upperCI=right
+    )
+    return(out)
+}
+```
+
+### Übersicht
+
+Wie verhält sich das 95% Konfidenzinterval (95% KI), unter diesen drei Bedingungen?
+
+1. Fixiert seien das Regressionsgewicht und die Freiheitsgrade, der Standardfehler wird verändert.
+2. Fixiert seien der Standardfehler und die Freiheitsgrade, das Regressionsgewicht wird verändert.
+3. Fixiert seien das Regressionsgewicht und der Standardfehler, die Freiheitsgrade werden verändert.
+
+Zeile 1 des Output sei Referenzwert, darauf folgen 3 kleinere und dann 3 grössere Werte. Man beachte wie sich die Distanzen im Vergleich zum Referenzwert verändern.
+
+### Bedingung 1
+
+```{r chunk3}
+output1 <- data.frame(Estimate=.5,
+                      StdError=c(.2, .15, .1, .05, .25, .3, .45))
+(ergebnis1 <- manualComputation(data=output1, df=62))
+# Berechne 'Distanz' zwischen unterer und oberer Grenze des 95% KI:
+(distanz1 <- apply(ergebnis1[,5:6], 1, dist))
+# Antwort: Immer verglichen mit Zeile 1, bei:
+# Verkleinerung des StdError = 95% KI wird enger (= präziser)
+# Vergrösserung des StdError = 95% KI wird breiter (= unpräziser)
+# Visualisierung:
+mat1 <- rbind(x=rep(0, 7), distanz1)
+matplot(y=rbind(1:7, 1:7), x=mat1, type="l", lty=1, lwd=2,
+        xlab = "Distanz: Obere minus untere 95% KI Grenze",
+        ylab = "Linien 2 bis 7 in Referenz zu 1")
+```
+
+### Bedingung 2
+
+```{r chunk4}
+output2 <- data.frame(Estimate=c(.5, .45, .4, .3, .55, .6, .7),
+                      StdError=.2)
+(ergebnis2 <- manualComputation(data=output2, df=62))
+# Berechne 'Distanz' zwischen unterer und oberer Grenze des 95% KI:
+(distanz2 <- apply(ergebnis2[,5:6], 1, dist))
+# Als Spalte präsentiert:
+cbind(distanz2)
+# Antwort:
+# Das 95% KI bleibt konstant breit.
+```
+
+### Bedingung 3
+
+```{r chunk5}
+output3 <- data.frame(Estimate=.5, StdError=.2)
+(ergebnis3 <- manualComputation(data=output3,
+                                df=c(6, 5, 4, 3, 7, 8, 9)))
+# Berechne 'Distanz' zwischen unterer und oberer Grenze des 95% KI:
+(distanz3 <- apply(ergebnis3[,5:6], 1, dist))
+# Antwort:
+# Verkleinerung der Freiheitsgrade = 95% KI wird breiter (= unpräziser)
+# Vergrösserung des Freiheitsgrade = 95% KI wird enger (= präziser)
+#
+# Visualisierung:
+mat3 <- rbind(x=rep(0, 7), distanz3)
+matplot(y=rbind(1:7, 1:7), x=mat3, type="l", lty=1, lwd=2,
+        xlab = "Distanz: Obere minus untere 95% KI Grenze",
+        ylab = "Linien 2 bis 7 in Referenz zu 1")
+```
+
+### Lesehinweise
+
+Wer an theoretischen Aspekten rund um das (frequentistische) 95% Konfidenzinterval hat, siehe Naimi & Whitcomb (2020) 'Can Confidence Intervals Be Interpreted?'
+
+Sehr nahe verwandt ist der weit verbreitete Irrglaube, demzufolge zwei überlappende, unabhängige Konfidenzintervalle immer anzeigen, dass sich beide Gruppen statistisch nicht signifikant voneinander unterscheiden. Zur Einsicht reicht das Abstract von Cumming (2009).
+
+**Referenz**
+
+Cumming, G. (2009). Inference by eye: Reading the overlap of independent confidence intervals. *Statistics in medicine*, *28*(2), 205-220.
+
+Naimi, A. I., & Whitcomb, B. W. (2020). Can confidence intervals be interpreted?. *American Journal of Epidemiology*, *189*(7), 631-633.
