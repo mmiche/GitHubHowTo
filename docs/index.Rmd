@@ -13,9 +13,9 @@ knitr::opts_chunk$set(echo = TRUE, message=FALSE)
 
 ### Einleitung
 
-**Hauptfrage**: Wie verhält sich das zweiseitige 95% Konfidenzinterval (95% KI) unter drei verschiedenen Bedingungen?
+**Hauptfrage**: Wie verhält sich das zweiseitige 95% Konfidenzintervall (95% KI)?
 
-Diese Frage wird völlig unabhängig von jeglichen theoretischen Fragen behandelt, die man zum 95% KI stellen könnte. Es geht also lediglich um das zahlenmässige Verhalten des 95% KI, d.h. unter welchen Bedingungen verändert sich dessen Breite? Mit Breite ist die Distanz gemeint zwischen unterer und oberer 95% KI Grenze.
+Diese Frage wird unabhängig von jeglichen theoretischen Aspekten behandelt, die man beim 95% KI betrachten könnte. Es geht also lediglich um das zahlenmässige Verhalten des 95% KI, d.h. unter welchen Bedingungen (siehe Reiter *Drei Bedingungen*) verändert sich dessen Breite? Mit Breite ist die Distanz gemeint zwischen unterer und oberer 95% KI Grenze.
 
 Es wird der Output eines einfachen linearen Regressionsmodells genommen, d.h. das Regressionsgewicht (Estimate), dessen Standardfehler (StdError), die t-Statistik (= Estimate/StdError), dessen p-Wert und dessen zweiseitiges 95% KI.
 
@@ -67,7 +67,7 @@ manualComputation <- function(data=NULL, percent=.95, df=NULL) {
 }
 ```
 
-### Übersicht
+### Drei Bedingungen
 
 Wie verhält sich das 95% Konfidenzinterval (95% KI), unter diesen drei Bedingungen?
 

@@ -11,7 +11,7 @@
 
 <meta name="author" content="Marcel Miché" />
 
-<meta name="date" content="2026-04-20" />
+<meta name="date" content="2026-04-21" />
 
 <title>Verhalten des 95% Konfidenzintervalls</title>
 
@@ -352,7 +352,7 @@ display: none;
 
 <h1 class="title toc-ignore">Verhalten des 95% Konfidenzintervalls</h1>
 <h4 class="author">Marcel Miché</h4>
-<h4 class="date">2026-04-20</h4>
+<h4 class="date">2026-04-21</h4>
 
 </div>
 
@@ -362,12 +362,13 @@ display: none;
 <div id="einleitung" class="section level3">
 <h3>Einleitung</h3>
 <p><strong>Hauptfrage</strong>: Wie verhält sich das zweiseitige 95%
-Konfidenzinterval (95% KI) unter drei verschiedenen Bedingungen?</p>
-<p>Diese Frage wird völlig unabhängig von jeglichen theoretischen Fragen
-behandelt, die man zum 95% KI stellen könnte. Es geht also lediglich um
-das zahlenmässige Verhalten des 95% KI, d.h. unter welchen Bedingungen
-verändert sich dessen Breite? Mit Breite ist die Distanz gemeint
-zwischen unterer und oberer 95% KI Grenze.</p>
+Konfidenzintervall (95% KI)?</p>
+<p>Diese Frage wird unabhängig von jeglichen theoretischen Aspekten
+behandelt, die man beim 95% KI betrachten könnte. Es geht also lediglich
+um das zahlenmässige Verhalten des 95% KI, d.h. unter welchen
+Bedingungen (siehe Reiter <em>Drei Bedingungen</em>) verändert sich
+dessen Breite? Mit Breite ist die Distanz gemeint zwischen unterer und
+oberer 95% KI Grenze.</p>
 <p>Es wird der Output eines einfachen linearen Regressionsmodells
 genommen, d.h. das Regressionsgewicht (Estimate), dessen Standardfehler
 (StdError), die t-Statistik (= Estimate/StdError), dessen p-Wert und
@@ -415,8 +416,8 @@ manualComputation &lt;- function(data=NULL, percent=.95, df=NULL) {
     return(out)
 }</code></pre>
 </div>
-<div id="übersicht" class="section level3">
-<h3>Übersicht</h3>
+<div id="drei-bedingungen" class="section level3">
+<h3>Drei Bedingungen</h3>
 <p>Wie verhält sich das 95% Konfidenzinterval (95% KI), unter diesen
 drei Bedingungen?</p>
 <ol style="list-style-type: decimal">
