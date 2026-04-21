@@ -434,6 +434,10 @@ zum Referenzwert verändern.</p>
 </div>
 <div id="bedingung-1" class="section level3">
 <h3>Bedingung 1</h3>
+<blockquote>
+<p>Fixiert: Regressionsgewicht, Freiheitsgrade. Variiert:
+Standardfehler.</p>
+</blockquote>
 <pre class="r"><code>output1 &lt;- data.frame(Estimate=.5,
                       StdError=c(.2, .15, .1, .05, .25, .3, .45))
 (ergebnis1 &lt;- manualComputation(data=output1, df=62))</code></pre>
@@ -460,6 +464,10 @@ matplot(y=rbind(1:7, 1:7), x=mat1, type=&quot;l&quot;, lty=1, lwd=2,
 </div>
 <div id="bedingung-2" class="section level3">
 <h3>Bedingung 2</h3>
+<blockquote>
+<p>Fixiert: Standardfehler, Freiheitsgrade. Variiert:
+Regressionsgewicht.</p>
+</blockquote>
 <pre class="r"><code>output2 &lt;- data.frame(Estimate=c(.5, .45, .4, .3, .55, .6, .7),
                       StdError=.2)
 (ergebnis2 &lt;- manualComputation(data=output2, df=62))</code></pre>
@@ -489,6 +497,10 @@ cbind(distanz2)</code></pre>
 </div>
 <div id="bedingung-3" class="section level3">
 <h3>Bedingung 3</h3>
+<blockquote>
+<p>Fixiert: Regressionsgewicht, Standardfehler. Variiert:
+Freiheitsgrade.</p>
+</blockquote>
 <pre class="r"><code>output3 &lt;- data.frame(Estimate=.5, StdError=.2)
 (ergebnis3 &lt;- manualComputation(data=output3,
                                 df=c(6, 5, 4, 3, 7, 8, 9)))</code></pre>

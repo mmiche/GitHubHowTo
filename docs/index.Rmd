@@ -79,6 +79,8 @@ Zeile 1 des Output sei Referenzwert, darauf folgen 3 kleinere und dann 3 grösse
 
 ### Bedingung 1
 
+> Fixiert: Regressionsgewicht, Freiheitsgrade. Variiert: Standardfehler.
+
 ```{r chunk3}
 output1 <- data.frame(Estimate=.5,
                       StdError=c(.2, .15, .1, .05, .25, .3, .45))
@@ -97,6 +99,8 @@ matplot(y=rbind(1:7, 1:7), x=mat1, type="l", lty=1, lwd=2,
 
 ### Bedingung 2
 
+> Fixiert: Standardfehler, Freiheitsgrade. Variiert: Regressionsgewicht.
+
 ```{r chunk4}
 output2 <- data.frame(Estimate=c(.5, .45, .4, .3, .55, .6, .7),
                       StdError=.2)
@@ -110,6 +114,8 @@ cbind(distanz2)
 ```
 
 ### Bedingung 3
+
+> Fixiert: Regressionsgewicht, Standardfehler. Variiert: Freiheitsgrade.
 
 ```{r chunk5}
 output3 <- data.frame(Estimate=.5, StdError=.2)
