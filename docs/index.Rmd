@@ -140,7 +140,7 @@ Wer an theoretischen Aspekten rund um das (frequentistische) 95% Konfidenzinterv
 
 Sehr nahe verwandt ist der weit verbreitete Irrglaube, demzufolge zwei überlappende, unabhängige Konfidenzintervalle immer anzeigen, dass sich beide Gruppen statistisch nicht signifikant voneinander unterscheiden. Zur Einsicht reicht das Abstract von Cumming (2009).
 
-Wer wissen will, welche und wie viel Information in einem Konfidenzintervall enthalten ist, siehe 'Beyond the confidence interval' von Poole (1987).
+Wer wissen will, welche und wie viel Information in einem Konfidenzintervall enthalten ist, siehe 'Beyond the confidence interval' von Poole (1987) und/oder Poole (2001).
 
 **Referenz**
 
@@ -149,5 +149,7 @@ Cumming, G. (2009). Inference by eye: Reading the overlap of independent confide
 Naimi, A. I., & Whitcomb, B. W. (2020). Can confidence intervals be interpreted?. *American Journal of Epidemiology*, *189*(7), 631-633.
 
 Poole, C. (1987). Beyond the confidence interval. *American Journal of Public Health*, *77*(2), 195-199.
+
+Poole, C. (2001). Low P-values or narrow confidence intervals: which are more durable?. *Epidemiology*, 12(3), 291-294.
 
 Smithson, M. (2025). Confidence interval. In *International Encyclopedia of Statistical Science* (pp. 516-518). Berlin, Heidelberg: Springer Berlin Heidelberg.
