@@ -142,7 +142,7 @@ Sehr nahe verwandt ist der weit verbreitete Irrglaube, demzufolge zwei überlapp
 
 Wer wissen will, welche und wie viel Information in einem Konfidenzintervall enthalten ist, siehe 'Beyond the confidence interval' von Poole (1987) und/oder Poole (2001).
 
-**Referenz**
+**Referenzen**
 
 Cumming, G. (2009). Inference by eye: Reading the overlap of independent confidence intervals. *Statistics in medicine*, *28*(2), 205-220.
 
